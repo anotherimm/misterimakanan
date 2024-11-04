@@ -125,7 +125,6 @@ const styles = StyleSheet.create({
     padding: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
-    marginTop: 20, // Add margin top if necessary
   },
   profileImageContainer: {
     position: 'relative',

@@ -300,7 +300,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    marginTop: 20,
   },
   // Header Styles
   header: {
