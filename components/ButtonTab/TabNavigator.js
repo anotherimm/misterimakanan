@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import HomeScreen from '../../pages/HomeScreen';
 import ProfileScreen from '../../pages/ProfileScreen';
 import SearchScreen from '../../pages/SearchScreen';
-import AddScreen from '../../pages/AddScreen'; // Import halaman Add (pastikan membuat file ini)
+import AddScreen from '../../pages/AddScreen'; 
 
 const Tab = createBottomTabNavigator();
 

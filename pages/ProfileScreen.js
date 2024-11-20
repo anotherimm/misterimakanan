@@ -6,7 +6,7 @@ export default function ProfileScreen({ navigation, route }) {
   // Menambahkan state untuk user data
   const [userData, setUserData] = useState({
     name: 'Nama Pengguna',
-    photo: 'https://instagram.fsrg6-1.fna.fbcdn.net/v/t51.2885-19/435132890_1229141318491884_4194860436136606680_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fsrg6-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=aUSDo6JnIRcQ7kNvgERyKGa&_nc_gid=d93bdae313ba4c19b42389a145284339&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYCTD6aWR3lCgfbEShJEFxma1Bzh4J6EkrXv_hzajKkNDg&oe=672A0CBC&_nc_sid=7a9f4b'
+    photo: 'https://instagram.fsrg5-1.fna.fbcdn.net/v/t51.2885-19/435132890_1229141318491884_4194860436136606680_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fsrg5-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=iHIzOOmJnOkQ7kNvgGphLp2&_nc_gid=c905777bae3944f2bcdab7d57dfa6d74&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYCma2f6KRptaf_h0F0cecoe6u9AnvRGfelXbtT4FfOB_w&oe=674389BC&_nc_sid=7a9f4b'
   });
   
   React.useEffect(() => {
@@ -102,7 +102,16 @@ export default function ProfileScreen({ navigation, route }) {
             onPress={() => navigation.navigate('About')}
           />
           
-          <TouchableOpacity style={styles.logoutButton}>
+          <TouchableOpacity 
+            style={styles.logoutButton}
+            onPress={() => {
+              // Reset stack dan arahkan ke SplashScreen
+              navigation.reset({
+                index: 0, // Index pertama pada stack
+                routes: [{ name: 'SplashScreen' }] 
+              });
+            }}
+          >
             <Text style={styles.logoutText}>Keluar</Text>
           </TouchableOpacity>
         </View>
