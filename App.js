@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import TabNavigator from './components/ButtonTab/TabNavigator';
-import SplashScreen from './pages/SplashScreen'; // Import splash screen
+import SplashScreen from './pages/SplashScreen'; 
 import AboutScreen from './pages/AboutScreen';
 import TermsOfServiceScreen from './pages/TermsOfServiceScreen';
 import PrivacyPolicyScreen from './pages/PrivacyPolicyScreen';

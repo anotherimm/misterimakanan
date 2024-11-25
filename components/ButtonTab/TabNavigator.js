@@ -5,6 +5,7 @@ import HomeScreen from '../../pages/HomeScreen';
 import ProfileScreen from '../../pages/ProfileScreen';
 import SearchScreen from '../../pages/SearchScreen';
 import AddScreen from '../../pages/AddScreen'; 
+import GachaFoodScreen from '../../pages/GachaFoodScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -50,7 +51,20 @@ export default function TabNavigator() {
           ),
         }}
       />
-      {/* Tambah Screen Baru */}
+      <Tab.Screen
+        name="GachaTab"
+        component={GachaFoodScreen}
+        options={{
+          tabBarLabel: 'Misteri',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons
+              name="dice-multiple" // Menggunakan ikon dadu untuk merepresentasikan gacha
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
       <Tab.Screen
         name="AddTab"
         component={AddScreen}
@@ -58,7 +72,7 @@ export default function TabNavigator() {
           tabBarLabel: 'Add',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
-              name="plus-circle" // Menggunakan ikon plus-circle
+              name="plus-circle"
               size={size}
               color={color}
             />
